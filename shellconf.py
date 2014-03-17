@@ -5,22 +5,27 @@ import servers
 
 class ShellConf():
 
-    def __init__():
+
+    def __init__(self, shell, scripts):
+        self.shell = shell
+        self.scripts = scripts
+
+    def log(self):
         pass
 
-    def run():
-
+    def run(self):
         for server in servers.servers:
-            print('----------------------------------------------')
-            print('Running configuration scripts for: ' + server)
-            print('----------------------------------------------')
+            print('------------------------------------------------------------------')
+            print('RUNNING SCRIPTS @ ' + server)
+            print('------------------------------------------------------------------')
 
-            for fn in os.listdir('./scripts/'):
-                print('--------------- Running script: ' + fn + ' ---------------')
-                subprocess.call('ssh ' + server + ' "bash -s" < ./scripts/' + fn, shell=True)
+            for fn in os.listdir(self.scripts):
+                print('- RUNNING SCRIPT ' + self.scripts + fn + ' @ ' + server + ':')
+                subprocess.call('ssh ' + server + ' "' + self.shell + ' -s" < ' + self.scripts + fn, shell=True)
                 print('')
 
             print('')
 
 if __name__ == '__main__':
-    ShellConf.run()
+    sc = ShellConf('bash', './scripts/')
+    sc.run()
