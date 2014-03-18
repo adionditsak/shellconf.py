@@ -1,7 +1,9 @@
 shellconf.py
 ============
 
-Simple remote configuration with shell for UNIX/Linux systems
+Simple remote configuration with shell for UNIX/Linux systems.
+
+Run local shell scripts on defined remote servers chronologically.
 
 ###Directory structure
   
@@ -15,7 +17,7 @@ Simple remote configuration with shell for UNIX/Linux systems
     |   `-- uname.sh
     |-- servers.py
     `-- shellconf.py
-  
+
 ###How to use
 
 First of all, define your servers in the list of servers.py file, with the following format:
@@ -43,3 +45,5 @@ As a module from the Python prompt:
 As a CLI:
   
     $ python shellconf.py
+
+This would run the shell scripts placed in ./scripts/ on the remote servers one by one.
