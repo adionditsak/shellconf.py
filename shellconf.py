@@ -30,10 +30,11 @@ class ShellConf():
 
             if p.returncode:
                 self.log(server, fn, errors)
-                print('- SCRIPT HAS BEEN EXECUTED WITH ERRORS - ERROR WRITTEN TO LOG.')
+                print('- SCRIPT HAS BEEN EXECUTED WITH ERRORS, SEE MORE AT ./log/shellconf.log.')
             else:
                 self.log(server, fn, output)
-                print('- SCRIPT HAS BEEN EXECUTED WITH SUCCESS - OUTPUT WRITTEN TO LOG.')
+                print('- SCRIPT HAS BEEN EXECUTED WITH SUCCESS, SEE MORE AT ./log/shellconf.log.')
+
 
 if __name__ == '__main__':
     sc = ShellConf('bash', './scripts/')
