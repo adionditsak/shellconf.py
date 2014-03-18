@@ -5,7 +5,7 @@ Simple remote configuration with shell for UNIX/Linux systems.
 
 Run local shell scripts on defined remote servers chronologically.
 
-###Directory structure
+##Directory structure
   
     .
     |-- README.md
@@ -18,7 +18,7 @@ Run local shell scripts on defined remote servers chronologically.
     |-- servers.py
     `-- shellconf.py
 
-###How to use
+##How to use
 
 First of all, define your servers in the list of servers.py file, with the following format:
 
