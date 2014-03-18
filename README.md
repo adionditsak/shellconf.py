@@ -1,4 +1,4 @@
 shellconf.py
 ============
 
-Simple remote configuration with bash shell
+Simple remote configuration with shell
