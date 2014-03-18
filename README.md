@@ -32,7 +32,9 @@ Then use the run() function to run the scripts at your remote servers defined in
 
     sc.run()
   
-You can call it directly from shellconf.py or run it as a module. A demonstration as a module from the Python prompt:
+You can call it directly from shellconf.py or run it as a module. 
+
+As a module from the Python prompt:
 
     >>> import shellconf
     >>> sc = shellconf.ShellConf('bash', './scripts/')
