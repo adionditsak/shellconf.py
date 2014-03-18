@@ -4,39 +4,40 @@ shellconf.py
 Simple remote configuration with shell for UNIX/Linux systems
 
 ###Directory structure
-  .
-  |-- README.md
-  |-- log
-  |   `-- shellconf.log
-  |-- scripts
-  |   |-- apt.sh
-  |   |-- list.sh
-  |   `-- uname.sh
-  |-- servers.py
-  `-- shellconf.py
+  
+    .
+    |-- README.md
+    |-- log
+    |   `-- shellconf.log
+    |-- scripts
+    |   |-- apt.sh
+    |   |-- list.sh
+    |   `-- uname.sh
+    |-- servers.py
+    `-- shellconf.py
   
 ###How to use
 
 First of all, define your servers in the list of servers.py file, with the following format:
 
-  servers = ['user@ip-1', 'user@ip-2']
+    servers = ['user@ip-1', 'user@ip-2']
   
 Then make sure you got what you need in your scripts folder of shell scripts to execute on your remote servers.
 
 Initiate class with arguments of what shell to use and where your shell scripts are located. Here you can write whatever shell you would like to use, eg. sh, bash, zsh, csh or ksh:
 
-  sc = ShellConf('bash', './scripts/')
+    sc = ShellConf('bash', './scripts/')
   
 Then use the run() function to run the scripts at your remote servers defined in servers.py list.
 
-  sc.run()
+    sc.run()
   
 You can call it directly from shellconf.py or run it as a module. A demonstration as a module from the Python prompt:
 
-  >>> import shellconf
-  >>> sc = shellconf.ShellConf('bash', './scripts/')
-  >>> sc.run()
+    >>> import shellconf
+    >>> sc = shellconf.ShellConf('bash', './scripts/')
+    >>> sc.run()
   
 As a CLI:
   
-  $ python shellconf.py
+    $ python shellconf.py
