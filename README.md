@@ -30,7 +30,7 @@ Initiate class with arguments of what shell to use and where your shell scripts 
 
     sc = ShellConf('bash', './scripts/')
   
-Then use the run() function to run the scripts at your remote servers defined in servers.py list.
+Then use the run() function to run the scripts at your remote servers defined in the servers.py list.
 
     sc.run()
   
