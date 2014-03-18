@@ -3,8 +3,8 @@
 import subprocess, os, time, threading
 import servers
 
-class ShellConf():
 
+class ShellConf():
 
     def __init__(self, shell, scripts):
         self.shell = shell
