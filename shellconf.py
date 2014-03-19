@@ -12,12 +12,16 @@ class ShellConf():
 
     def run(self):
         for server in servers.servers:
+            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+            print(server)
+            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+            print('')
             t = threading.Thread(target=self.run_shell_scripts(server))
             t.start()
 
     def log(self, server, script, log_input):
         with open('./log/shellconf.log', 'a') as log_file:
-            log_file.write('[' + script + ' @ ' + server + '] (' + time.strftime("%H:%M:%S - %d/%m/%Y") + '):\n' + log_input + '\n')
+            log_file.write('[' + script + ' @ ' + server + '] (' + time.strftime("%d/%m/%Y | %H:%M:%S") + '):\n' + log_input + '\n')
 
     def run_shell_scripts(self, server):
         for fn in os.listdir(self.scripts):
@@ -25,15 +29,15 @@ class ShellConf():
 
             cmd = 'ssh ' + server + ' "' + self.shell + ' -s" < ' + self.scripts + fn
 
-            p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
+            p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             output, errors = p.communicate()
 
             if p.returncode:
                 self.log(server, fn, errors)
-                print('- SCRIPT HAS BEEN EXECUTED WITH ERRORS, SEE MORE AT ./log/shellconf.log.')
+                print('- ERRORS. See ./log/shellconf.log for details.\n')
             else:
                 self.log(server, fn, output)
-                print('- SCRIPT HAS BEEN EXECUTED WITH SUCCESS, SEE MORE AT ./log/shellconf.log.')
+                print('- SUCCESS. See ./log/shellconf.log for details.\n')
 
 
 if __name__ == '__main__':
