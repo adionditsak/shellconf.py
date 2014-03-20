@@ -43,7 +43,12 @@ As a module from the Python prompt:
     >>> sc.run()
   
 As a CLI:
+
+Use -a for configuring all servers, and -s [server-name] for one server.
   
-    $ python shellconf.py
+    $ python shellconf.py -a
+
+or
+    $ python shellconf.py -s user@ip
 
 This would run the shell scripts placed in ./scripts/ on the remote servers one by one.
