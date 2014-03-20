@@ -69,7 +69,7 @@ This would run the shell scripts placed in ./scripts/ on the remote servers one 
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     [RUNNING SCRIPT ./scripts/apt.sh @ root@aarvik.dk]
-    - ERRORS. See ./log/shellconf.log for details.
+    - SUCCESS. See ./log/shellconf.log for details.
     
     [RUNNING SCRIPT ./scripts/uname.sh @ root@aarvik.dk]
     - SUCCESS. See ./log/shellconf.log for details.
