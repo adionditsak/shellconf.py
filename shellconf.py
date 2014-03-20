@@ -10,8 +10,7 @@ class ShellConf():
         self.shell = shell
         self.scripts = scripts
         self.lock = threading.Lock()
-        
-        
+
     def run_for_all_servers(self):
         for server in servers.servers:
             threading.Thread(target=lambda:self.run_shell_scripts(server)).start() # async
@@ -22,37 +21,32 @@ class ShellConf():
     def list_servers(self):
         print('Servers listed (./servers.py):')
         for i, server in enumerate(servers.servers):
-            print(str(i) + ': ' + server)
+            print('%s: %s' % (str(i), server))
 
     def log(self, server, script, log_input):
         with self.lock, open('./log/shellconf.log', 'a') as log_file:
             log_file.write('[%s @ %s] (%s):\n%s\n\n' % (script, server, time.strftime("%d/%m/%Y | %H:%M:%S"), log_input))
 
     def run_shell_scripts(self, server):
-        with self.lock:
-            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-            print(server)
-            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-            print('')
-
         for fn in os.listdir(self.scripts):
             with self.lock:
-                print('[RUNNING SCRIPT ' + self.scripts + fn + ' @ ' + server + ']')
+                print('[RUNNING SCRIPT %s%s @ %s]' % (self.scripts, fn, server))
 
-            cmd = 'ssh ' + server + ' "' + self.shell + ' -s" < ' + self.scripts + fn
+            cmd = 'ssh %s "%s -s" < %s%s' % (server, self.shell, self.scripts, fn)
             p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             output, errors = p.communicate()
 
             if p.returncode:
                 self.log(server, fn, errors)
                 with self.lock:
-                    print('- ERRORS. See ./log/shellconf.log for details.\n')
+                    print('!!! - ERRORS with %s at %s. See ./log/shellconf.log for details.' % (fn, server))
             else:
                 self.log(server, fn, output)
                 with self.lock:
-                    print('- SUCCESS. See ./log/shellconf.log for details.\n')
+                    print('*** - SUCCESS with %s at %s. See ./log/shellconf.log for details.' % (fn, server))
+
         with self.lock:
-            print('--- ' + server + ' completed ---\n')
+            print('~~~~~~~ scripts for %s completed ~~~~~~~' % (server))
 
     def help(self):
         print('Use -a/--all for all servers or -s/--server [server] for one server.')
