@@ -62,23 +62,22 @@ or
 This would run the shell scripts placed in ./scripts/ on the remote servers one by one.
 
 ##Example output
-It is with the to servers which we of course can not connect to, but gives an idea.
 
-    $ python3 shellconf.py -a
+    # python shellconf.py -a
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    user@ip-1
+    root@aarvik.dk
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-    [RUNNING SCRIPT ./scripts/apt.sh @ user@ip-1]
+    [RUNNING SCRIPT ./scripts/apt.sh @ root@aarvik.dk]
     - ERRORS. See ./log/shellconf.log for details.
     
-    [RUNNING SCRIPT ./scripts/uname.sh @ user@ip-1]
-    - ERRORS. See ./log/shellconf.log for details.
+    [RUNNING SCRIPT ./scripts/uname.sh @ root@aarvik.dk]
+    - SUCCESS. See ./log/shellconf.log for details.
     
-    [RUNNING SCRIPT ./scripts/list.sh @ user@ip-1]
-    - ERRORS. See ./log/shellconf.log for details.
+    [RUNNING SCRIPT ./scripts/list.sh @ root@aarvik.dk]
+    - SUCCESS. See ./log/shellconf.log for details.
     
-    --- user@ip-1 completed ---
+    --- root@aarvik.dk completed ---
     
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     user@ip-2
