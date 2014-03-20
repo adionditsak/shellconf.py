@@ -392,3 +392,198 @@ total 248K
 69510805 drwxr-xr-x  11 root root 4.0K Jan 27  2013 usr
 69518165 drwxr-xr-x  15 root root 4.0K Dec 10 10:58 var
 
+[apt.sh @ user@ip-1] (20/03/2014 | 14:14:46):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[uname.sh @ user@ip-1] (20/03/2014 | 14:14:46):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[list.sh @ user@ip-1] (20/03/2014 | 14:14:46):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[apt.sh @ user@ip-2] (20/03/2014 | 14:14:47):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[uname.sh @ user@ip-2] (20/03/2014 | 14:14:47):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[list.sh @ user@ip-2] (20/03/2014 | 14:14:47):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[apt.sh @ user@ip-1] (20/03/2014 | 14:14:58):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[uname.sh @ user@ip-1] (20/03/2014 | 14:14:58):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[list.sh @ user@ip-1] (20/03/2014 | 14:14:58):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[apt.sh @ user@ip-2] (20/03/2014 | 14:14:58):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[uname.sh @ user@ip-2] (20/03/2014 | 14:14:58):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[list.sh @ user@ip-2] (20/03/2014 | 14:14:58):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[apt.sh @ root@aarvik.dk] (20/03/2014 | 14:17:12):
+W: GPG error: http://download.virtualbox.org squeeze Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 54422A4B98AB5139
+E: Invalid operation ugprade
+
+[uname.sh @ root@aarvik.dk] (20/03/2014 | 14:17:12):
+Linux anders 2.6.32-16-pve #1 SMP Mon Oct 22 08:38:13 CEST 2012 i686 GNU/Linux
+
+[list.sh @ root@aarvik.dk] (20/03/2014 | 14:17:12):
+total 248K
+69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 .
+69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 ..
+69371483 drwxr-xr-x   2 root root 4.0K Feb  3  2013 .ssh
+69305622 lrwxrwxrwx   1 root root   39 Jan 23  2013 aquota.group -> /proc/vz/vzaquota/000000e0/aquota.group
+69305623 lrwxrwxrwx   1 root root   38 Jan 23  2013 aquota.user -> /proc/vz/vzaquota/000000e0/aquota.user
+69379154 drwxr-xr-x   2 root root 4.0K Oct 24 22:19 bin
+69387108 drwxr-xr-x   2 root root 4.0K Oct 16 01:19 boot
+69395502 drwxr-xr-x   4 root root 4.0K Mar 12 09:30 dev
+69305560 -rw-r--r--   1 root root 166K Sep 17  2013 dos
+69404034 drwxr-xr-x 109 root root 4.0K Mar 15 20:26 etc
+69411964 drwxr-xr-x  10 root root 4.0K Dec 20 11:32 home
+69420052 drwxr-xr-x  11 root root 4.0K Sep 22 11:27 lib
+69428156 drwxr-xr-x   2 root root 4.0K May  6  2011 media
+69436354 drwxr-xr-x   2 root root 4.0K Mar 12  2011 mnt
+69304321 drwxr-xr-x   3 root root 4.0K Dec 22 02:28 opt
+       1 dr-xr-xr-x  74 root root    0 Mar 12 09:30 proc
+69461206 drwxr-xr-x  60 root root 4.0K Mar 20 14:17 root
+69469158 drwxr-xr-x   2 root root 4.0K Mar  1 19:42 sbin
+69478006 drwxr-xr-x   2 root root 4.0K Jul 21  2010 selinux
+69485427 drwxr-xr-x   2 root root 4.0K May  6  2011 srv
+   18354 drwxr-xr-x   7 root root    0 Mar 12 09:30 sys
+69501917 drwxrwxrwt   5 root root 4.0K Mar 20 14:15 tmp
+69510805 drwxr-xr-x  11 root root 4.0K Jan 27  2013 usr
+69518165 drwxr-xr-x  15 root root 4.0K Dec 10 10:58 var
+
+[apt.sh @ user@ip-2] (20/03/2014 | 14:17:12):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[uname.sh @ user@ip-2] (20/03/2014 | 14:17:13):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[list.sh @ user@ip-2] (20/03/2014 | 14:17:13):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[apt.sh @ root@aarvik.dk] (20/03/2014 | 14:20:58):
+W: GPG error: http://download.virtualbox.org squeeze Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 54422A4B98AB5139
+E: Invalid operation ugprade
+
+[uname.sh @ root@aarvik.dk] (20/03/2014 | 14:20:58):
+Linux anders 2.6.32-16-pve #1 SMP Mon Oct 22 08:38:13 CEST 2012 i686 GNU/Linux
+
+[list.sh @ root@aarvik.dk] (20/03/2014 | 14:20:58):
+total 248K
+69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 .
+69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 ..
+69371483 drwxr-xr-x   2 root root 4.0K Feb  3  2013 .ssh
+69305622 lrwxrwxrwx   1 root root   39 Jan 23  2013 aquota.group -> /proc/vz/vzaquota/000000e0/aquota.group
+69305623 lrwxrwxrwx   1 root root   38 Jan 23  2013 aquota.user -> /proc/vz/vzaquota/000000e0/aquota.user
+69379154 drwxr-xr-x   2 root root 4.0K Oct 24 22:19 bin
+69387108 drwxr-xr-x   2 root root 4.0K Oct 16 01:19 boot
+69395502 drwxr-xr-x   4 root root 4.0K Mar 12 09:30 dev
+69305560 -rw-r--r--   1 root root 166K Sep 17  2013 dos
+69404034 drwxr-xr-x 109 root root 4.0K Mar 15 20:26 etc
+69411964 drwxr-xr-x  10 root root 4.0K Dec 20 11:32 home
+69420052 drwxr-xr-x  11 root root 4.0K Sep 22 11:27 lib
+69428156 drwxr-xr-x   2 root root 4.0K May  6  2011 media
+69436354 drwxr-xr-x   2 root root 4.0K Mar 12  2011 mnt
+69304321 drwxr-xr-x   3 root root 4.0K Dec 22 02:28 opt
+       1 dr-xr-xr-x  74 root root    0 Mar 12 09:30 proc
+69461206 drwxr-xr-x  60 root root 4.0K Mar 20 14:17 root
+69469158 drwxr-xr-x   2 root root 4.0K Mar  1 19:42 sbin
+69478006 drwxr-xr-x   2 root root 4.0K Jul 21  2010 selinux
+69485427 drwxr-xr-x   2 root root 4.0K May  6  2011 srv
+   18354 drwxr-xr-x   7 root root    0 Mar 12 09:30 sys
+69501917 drwxrwxrwt   5 root root 4.0K Mar 20 14:20 tmp
+69510805 drwxr-xr-x  11 root root 4.0K Jan 27  2013 usr
+69518165 drwxr-xr-x  15 root root 4.0K Dec 10 10:58 var
+
+[apt.sh @ user@ip-2] (20/03/2014 | 14:20:58):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[uname.sh @ user@ip-2] (20/03/2014 | 14:20:58):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[list.sh @ user@ip-2] (20/03/2014 | 14:20:58):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[apt.sh @ root@aarvik.dk] (20/03/2014 | 15:04:43):
+W: GPG error: http://download.virtualbox.org squeeze Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 54422A4B98AB5139
+E: Invalid operation ugprade
+
+[uname.sh @ root@aarvik.dk] (20/03/2014 | 15:04:43):
+Linux anders 2.6.32-16-pve #1 SMP Mon Oct 22 08:38:13 CEST 2012 i686 GNU/Linux
+
+[list.sh @ root@aarvik.dk] (20/03/2014 | 15:04:43):
+total 248K
+69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 .
+69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 ..
+69371483 drwxr-xr-x   2 root root 4.0K Feb  3  2013 .ssh
+69305622 lrwxrwxrwx   1 root root   39 Jan 23  2013 aquota.group -> /proc/vz/vzaquota/000000e0/aquota.group
+69305623 lrwxrwxrwx   1 root root   38 Jan 23  2013 aquota.user -> /proc/vz/vzaquota/000000e0/aquota.user
+69379154 drwxr-xr-x   2 root root 4.0K Oct 24 22:19 bin
+69387108 drwxr-xr-x   2 root root 4.0K Oct 16 01:19 boot
+69395502 drwxr-xr-x   4 root root 4.0K Mar 12 09:30 dev
+69305560 -rw-r--r--   1 root root 166K Sep 17  2013 dos
+69404034 drwxr-xr-x 109 root root 4.0K Mar 15 20:26 etc
+69411964 drwxr-xr-x  10 root root 4.0K Dec 20 11:32 home
+69420052 drwxr-xr-x  11 root root 4.0K Sep 22 11:27 lib
+69428156 drwxr-xr-x   2 root root 4.0K May  6  2011 media
+69436354 drwxr-xr-x   2 root root 4.0K Mar 12  2011 mnt
+69304321 drwxr-xr-x   3 root root 4.0K Dec 22 02:28 opt
+       1 dr-xr-xr-x  74 root root    0 Mar 12 09:30 proc
+69461206 drwxr-xr-x  60 root root 4.0K Mar 20 15:04 root
+69469158 drwxr-xr-x   2 root root 4.0K Mar  1 19:42 sbin
+69478006 drwxr-xr-x   2 root root 4.0K Jul 21  2010 selinux
+69485427 drwxr-xr-x   2 root root 4.0K May  6  2011 srv
+   18354 drwxr-xr-x   7 root root    0 Mar 12 09:30 sys
+69501917 drwxrwxrwt   5 root root 4.0K Mar 20 15:00 tmp
+69510805 drwxr-xr-x  11 root root 4.0K Jan 27  2013 usr
+69518165 drwxr-xr-x  15 root root 4.0K Dec 10 10:58 var
+
+[apt.sh @ user@ip-2] (20/03/2014 | 15:04:43):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[uname.sh @ user@ip-2] (20/03/2014 | 15:04:43):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[list.sh @ user@ip-2] (20/03/2014 | 15:04:43):
+ssh: Could not resolve hostname ip-2: Name or service not known
+
+[apt.sh @ root@aarvik.dk] (20/03/2014 | 15:05:35):
+b"W: GPG error: http://download.virtualbox.org squeeze Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 54422A4B98AB5139\nE: Invalid operation ugprade\n"
+[uname.sh @ root@aarvik.dk] (20/03/2014 | 15:05:35):
+b'Linux anders 2.6.32-16-pve #1 SMP Mon Oct 22 08:38:13 CEST 2012 i686 GNU/Linux\n'
+[list.sh @ root@aarvik.dk] (20/03/2014 | 15:05:35):
+b'total 248K\n69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 .\n69305621 drwxr-xr-x  21 root root 4.0K Mar 12 09:30 ..\n69371483 drwxr-xr-x   2 root root 4.0K Feb  3  2013 .ssh\n69305622 lrwxrwxrwx   1 root root   39 Jan 23  2013 aquota.group -> /proc/vz/vzaquota/000000e0/aquota.group\n69305623 lrwxrwxrwx   1 root root   38 Jan 23  2013 aquota.user -> /proc/vz/vzaquota/000000e0/aquota.user\n69379154 drwxr-xr-x   2 root root 4.0K Oct 24 22:19 bin\n69387108 drwxr-xr-x   2 root root 4.0K Oct 16 01:19 boot\n69395502 drwxr-xr-x   4 root root 4.0K Mar 12 09:30 dev\n69305560 -rw-r--r--   1 root root 166K Sep 17  2013 dos\n69404034 drwxr-xr-x 109 root root 4.0K Mar 15 20:26 etc\n69411964 drwxr-xr-x  10 root root 4.0K Dec 20 11:32 home\n69420052 drwxr-xr-x  11 root root 4.0K Sep 22 11:27 lib\n69428156 drwxr-xr-x   2 root root 4.0K May  6  2011 media\n69436354 drwxr-xr-x   2 root root 4.0K Mar 12  2011 mnt\n69304321 drwxr-xr-x   3 root root 4.0K Dec 22 02:28 opt\n       1 dr-xr-xr-x  75 root root    0 Mar 12 09:30 proc\n69461206 drwxr-xr-x  60 root root 4.0K Mar 20 15:05 root\n69469158 drwxr-xr-x   2 root root 4.0K Mar  1 19:42 sbin\n69478006 drwxr-xr-x   2 root root 4.0K Jul 21  2010 selinux\n69485427 drwxr-xr-x   2 root root 4.0K May  6  2011 srv\n   18354 drwxr-xr-x   7 root root    0 Mar 12 09:30 sys\n69501917 drwxrwxrwt   5 root root 4.0K Mar 20 15:05 tmp\n69510805 drwxr-xr-x  11 root root 4.0K Jan 27  2013 usr\n69518165 drwxr-xr-x  15 root root 4.0K Dec 10 10:58 var\n'
+[apt.sh @ user@ip-2] (20/03/2014 | 15:05:36):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[uname.sh @ user@ip-2] (20/03/2014 | 15:05:36):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[list.sh @ user@ip-2] (20/03/2014 | 15:05:36):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[apt.sh @ user@ip-1] (20/03/2014 | 15:06:46):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[uname.sh @ user@ip-1] (20/03/2014 | 15:06:46):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[list.sh @ user@ip-1] (20/03/2014 | 15:06:46):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+[apt.sh @ user@ip-2] (20/03/2014 | 15:06:46):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[uname.sh @ user@ip-2] (20/03/2014 | 15:06:46):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[list.sh @ user@ip-2] (20/03/2014 | 15:06:46):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+[apt.sh @ user@ip-1] (20/03/2014 | 15:09:06):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+
+[uname.sh @ user@ip-1] (20/03/2014 | 15:09:06):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+
+[list.sh @ user@ip-1] (20/03/2014 | 15:09:06):
+b'ssh: Could not resolve hostname ip-1: Name or service not known\r\n'
+
+[apt.sh @ user@ip-2] (20/03/2014 | 15:09:06):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+
+[uname.sh @ user@ip-2] (20/03/2014 | 15:09:06):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+
+[list.sh @ user@ip-2] (20/03/2014 | 15:09:06):
+b'ssh: Could not resolve hostname ip-2: Name or service not known\r\n'
+

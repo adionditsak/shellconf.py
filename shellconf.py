@@ -24,7 +24,7 @@ class ShellConf():
 
     def log(self, server, script, log_input):
         with open('./log/shellconf.log', 'a') as log_file:
-            log_file.write('[' + script + ' @ ' + server + '] (' + time.strftime("%d/%m/%Y | %H:%M:%S") + '):\n' + str(log_input) + '\n')
+            log_file.write('[%s @ %s] (%s):\n%s\n\n' % (script, server, time.strftime("%d/%m/%Y | %H:%M:%S"), log_input))
 
     def run_shell_scripts(self, server):
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
