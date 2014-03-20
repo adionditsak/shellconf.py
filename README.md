@@ -62,34 +62,19 @@ or
 This would run the shell scripts placed in ./scripts/ on the remote servers one by one.
 
 ##Example output
-
-    # python shellconf.py -a
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    root@aarvik.dk
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
+    $ python shellconf.py -a
     [RUNNING SCRIPT ./scripts/apt.sh @ root@aarvik.dk]
-    - SUCCESS. See ./log/shellconf.log for details.
-    
-    [RUNNING SCRIPT ./scripts/uname.sh @ root@aarvik.dk]
-    - SUCCESS. See ./log/shellconf.log for details.
-    
-    [RUNNING SCRIPT ./scripts/list.sh @ root@aarvik.dk]
-    - SUCCESS. See ./log/shellconf.log for details.
-    
-    --- root@aarvik.dk completed ---
-    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    user@ip-2
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
     [RUNNING SCRIPT ./scripts/apt.sh @ user@ip-2]
-    - ERRORS. See ./log/shellconf.log for details.
-    
+    !!! - ERRORS with apt.sh at user@ip-2. See ./log/shellconf.log for details.
     [RUNNING SCRIPT ./scripts/uname.sh @ user@ip-2]
-    - ERRORS. See ./log/shellconf.log for details.
-    
+    !!! - ERRORS with uname.sh at user@ip-2. See ./log/shellconf.log for details.
     [RUNNING SCRIPT ./scripts/list.sh @ user@ip-2]
-    - ERRORS. See ./log/shellconf.log for details.
-    
-    --- user@ip-2 completed ---
+    !!! - ERRORS with list.sh at user@ip-2. See ./log/shellconf.log for details.
+    ~~~~~~~ scripts for user@ip-2 completed ~~~~~~~
+    !!! - ERRORS with apt.sh at root@aarvik.dk. See ./log/shellconf.log for details.
+    [RUNNING SCRIPT ./scripts/uname.sh @ root@aarvik.dk]
+    *** - SUCCESS with uname.sh at root@aarvik.dk. See ./log/shellconf.log for details.
+    [RUNNING SCRIPT ./scripts/list.sh @ root@aarvik.dk]
+    *** - SUCCESS with list.sh at root@aarvik.dk. See ./log/shellconf.log for details.
+    ~~~~~~~ scripts for root@aarvik.dk completed ~~~~~~~
