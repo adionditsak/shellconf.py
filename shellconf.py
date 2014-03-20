@@ -11,11 +11,6 @@ class ShellConf():
         self.scripts = scripts
 
     def initiate_server_configuration(self, server):
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        print(server)
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        print('')
-
         threading.Thread(target=self.run_shell_scripts(server)).start()
 
     def completed_server_configuration(self, server):
@@ -40,6 +35,11 @@ class ShellConf():
             log_file.write('[' + script + ' @ ' + server + '] (' + time.strftime("%d/%m/%Y | %H:%M:%S") + '):\n' + str(log_input) + '\n')
 
     def run_shell_scripts(self, server):
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print(server)
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print('')
+
         for fn in os.listdir(self.scripts):
             print('[RUNNING SCRIPT ' + self.scripts + fn + ' @ ' + server + ']')
 
@@ -53,6 +53,8 @@ class ShellConf():
             else:
                 self.log(server, fn, output)
                 print('- SUCCESS. See ./log/shellconf.log for details.\n')
+
+        print('--- ' + server + ' completed ---\n')
 
     def help(self):
         print('Use -a/--all for all servers or -s/--server [server] for one server.')
