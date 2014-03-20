@@ -18,11 +18,9 @@ class ShellConf():
         self.run_shell_scripts(server)
 
     def list_servers(self):
-        i = 0
         print('Servers listed (./servers.py):')
-        for server in servers.servers:
+        for i, server in enumerate(servers.servers):
             print(str(i) + ': ' + server)
-            i = i + 1
 
     def log(self, server, script, log_input):
         with open('./log/shellconf.log', 'a') as log_file:
