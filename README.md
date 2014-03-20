@@ -18,10 +18,10 @@ Run local shell scripts chronologically on defined remote servers asynchronously
     |-- servers.py
     `-- shellconf.py
     
-./log/ contains shellconf.log with output and errors from scripts which has been run on remote servers.
-./scripts/ contains your shell scripts which will be executed one by one as shellconf.py is running.
-./servers.py contains your servers in a list in user@ip format.
-./shellconf.py holds the logic.
+* ./log/ contains shellconf.log with output and errors from scripts which has been run on remote servers.
+* ./scripts/ contains your shell scripts which will be executed one by one as shellconf.py is running.
+* ./servers.py contains your servers in a list in user@ip format.
+* ./shellconf.py holds the logic.
 
 ##How to use
 
