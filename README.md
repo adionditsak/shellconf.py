@@ -72,7 +72,7 @@ This would run the shell scripts placed in ./scripts/ on the remote servers one 
     [RUNNING SCRIPT ./scripts/list.sh @ user@ip-2]
     !!! - ERRORS with list.sh at user@ip-2. See ./log/shellconf.log for details.
     ~~~~~~~ scripts for user@ip-2 completed ~~~~~~~
-    !!! - ERRORS with apt.sh at root@aarvik.dk. See ./log/shellconf.log for details.
+    *** - SUCCESS with apt.sh at root@aarvik.dk. See ./log/shellconf.log for details.
     [RUNNING SCRIPT ./scripts/uname.sh @ root@aarvik.dk]
     *** - SUCCESS with uname.sh at root@aarvik.dk. See ./log/shellconf.log for details.
     [RUNNING SCRIPT ./scripts/list.sh @ root@aarvik.dk]
