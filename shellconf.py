@@ -13,9 +13,6 @@ class ShellConf():
     def initiate_server_configuration(self, server):
         threading.Thread(target=self.run_shell_scripts(server)).start()
 
-    def completed_server_configuration(self, server):
-        print('--- ' + server + ' completed ---\n')
-
     def run_for_all_servers(self):
         for server in servers.servers:
             self.initiate_server_configuration(server)
