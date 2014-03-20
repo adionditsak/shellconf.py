@@ -10,15 +10,12 @@ class ShellConf():
         self.shell = shell
         self.scripts = scripts
 
-    def initiate_server_configuration(self, server):
-        threading.Thread(target=self.run_shell_scripts(server)).start()
-
     def run_for_all_servers(self):
         for server in servers.servers:
-            self.initiate_server_configuration(server)
+            threading.Thread(target=self.run_shell_scripts(server)).start() # async
 
     def run_for_one_server(self, server):
-        self.initiate_server_configuration(server)
+        self.run_shell_scripts(server)
 
     def list_servers(self):
         i = 0
