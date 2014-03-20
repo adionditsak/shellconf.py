@@ -3,7 +3,7 @@ shellconf.py
 
 Simple remote configuration with shell for UNIX/Linux systems.
 
-Run local shell scripts on defined remote servers chronologically.
+Run local shell scripts chronologically on defined remote servers asynchronously.
 
 ##Directory structure
   
@@ -17,6 +17,11 @@ Run local shell scripts on defined remote servers chronologically.
     |   `-- uname.sh
     |-- servers.py
     `-- shellconf.py
+    
+./log/ contains shellconf.log with output and errors from scripts which has been run on remote servers.
+./scripts/ contains your shell scripts which will be executed one by one as shellconf.py is running.
+./servers.py contains your servers in a list in user@ip format.
+./shellconf.py holds the logic.
 
 ##How to use
 
@@ -40,7 +45,7 @@ As a module from the Python prompt:
 
     >>> import shellconf
     >>> sc = shellconf.ShellConf('bash', './scripts/')
-    >>> sc.run()
+    >>> sc.run_for_all_servers() # or sc.run_for_one_server('user@ip')
   
 As a CLI:
 
