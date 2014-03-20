@@ -43,13 +43,13 @@ Then use the run() function to run the scripts at your remote servers defined in
   
 You can call it directly from shellconf.py or run it as a module. 
 
-As a module from the Python prompt:
+####As a module from the Python prompt:
 
     >>> import shellconf
     >>> sc = shellconf.ShellConf('bash', './scripts/')
     >>> sc.run_for_all_servers() # or sc.run_for_one_server('user@ip')
   
-As a CLI:
+####As a CLI
 
 Use -a for configuring all servers, and -s [server-name] for one server.
   
