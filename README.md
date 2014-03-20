@@ -60,3 +60,37 @@ or
     $ python shellconf.py -s user@ip
 
 This would run the shell scripts placed in ./scripts/ on the remote servers one by one.
+
+##Example output
+It is with the to servers which we of course can not connect to, but gives an idea.
+
+    $ python3 shellconf.py -a
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    user@ip-1
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    [RUNNING SCRIPT ./scripts/apt.sh @ user@ip-1]
+    - ERRORS. See ./log/shellconf.log for details.
+    
+    [RUNNING SCRIPT ./scripts/uname.sh @ user@ip-1]
+    - ERRORS. See ./log/shellconf.log for details.
+    
+    [RUNNING SCRIPT ./scripts/list.sh @ user@ip-1]
+    - ERRORS. See ./log/shellconf.log for details.
+    
+    --- user@ip-1 completed ---
+    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    user@ip-2
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    [RUNNING SCRIPT ./scripts/apt.sh @ user@ip-2]
+    - ERRORS. See ./log/shellconf.log for details.
+    
+    [RUNNING SCRIPT ./scripts/uname.sh @ user@ip-2]
+    - ERRORS. See ./log/shellconf.log for details.
+    
+    [RUNNING SCRIPT ./scripts/list.sh @ user@ip-2]
+    - ERRORS. See ./log/shellconf.log for details.
+    
+    --- user@ip-2 completed ---
