@@ -41,7 +41,7 @@ Initiate class with arguments of what shell to use and where your shell scripts 
   
 Then use the run() function to run the scripts at your remote servers defined in the servers.py list.
 
-    sc.run()
+    sc.run_for_all_servers() # or sc.run_for_one_server('user@ip')
   
 You can call it directly from shellconf.py or run it as a module. 
 
