@@ -3,7 +3,7 @@
 """
 shellconf.py - Simple remote configuration with shell for UNIX/Linux systems.
 
-:copyright: (c) 2014 by Anders Aarvik
+:copyright: (c) 2014 Anders Aarvik
 :author: Anders Aarvik (aarvik92@gmail.com) and contributors
 :license: MIT licensed. See LICENSE.txt
 """
