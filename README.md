@@ -5,6 +5,8 @@ Simple remote configuration with shell for UNIX/Linux systems.
 
 Run local shell scripts chronologically on defined remote servers asynchronously.
 
+MIT licensed - no restrictions.
+
 ##Directory structure
   
     .
