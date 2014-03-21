@@ -20,7 +20,7 @@ Run local shell scripts chronologically on defined remote servers asynchronously
     
 ####Explained
 
-* ./log/ contains shellconf.log with output and errors from scripts which has been run on remote servers.
+* ./log/ contains output.log with output of successfully executed scripts, and error.log with output of scripts which has been executed with failure.
 * ./scripts/ contains your shell scripts which will be executed one by one as shellconf.py is running.
 * ./servers.py contains your servers in a list in user@ip format.
 * ./shellconf.py holds the logic.
