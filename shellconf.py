@@ -23,8 +23,13 @@ class ShellConf():
         for i, server in enumerate(servers.servers):
             print('%s: %s' % (str(i), server))
 
-    def log(self, server, script, log_input):
-        with self.lock, open('./log/shellconf.log', 'a') as log_file:
+    def log(self, server, script, log_input, log_type):
+        if log_type == 'error':
+            log = './log/error.log'
+        elif log_type == 'success':
+            log = './log/output.log'
+
+        with self.lock, open(log, 'a') as log_file:
             log_file.write('[%s @ %s] (%s):\n%s\n\n' % (script, server, time.strftime("%d/%m/%Y | %H:%M:%S"), log_input))
 
     def run_shell_scripts(self, server):
@@ -37,13 +42,13 @@ class ShellConf():
             output, errors = p.communicate()
 
             if p.returncode:
-                self.log(server, fn, errors)
+                self.log(server, fn, errors, 'error')
                 with self.lock:
-                    print('!!! - ERRORS with %s at %s. See ./log/shellconf.log for details.' % (fn, server))
+                    print('!!! - ERRORS with %s at %s. See ./log/error.log for details.' % (fn, server))
             else:
-                self.log(server, fn, output)
+                self.log(server, fn, output, 'success')
                 with self.lock:
-                    print('*** - SUCCESS with %s at %s. See ./log/shellconf.log for details.' % (fn, server))
+                    print('*** - SUCCESS with %s at %s. See ./log/output.log for details.' % (fn, server))
 
         with self.lock:
             print('~~~~~~~ scripts for %s completed ~~~~~~~' % (server))
