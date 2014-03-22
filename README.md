@@ -12,7 +12,8 @@ MIT licensed - no restrictions.
     .
     |-- README.md
     |-- log
-    |   `-- shellconf.log
+    |   |-- error.log
+    |   `-- output.log
     |-- scripts
     |   |-- apt.sh
     |   |-- list.sh
