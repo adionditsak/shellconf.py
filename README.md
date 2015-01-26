@@ -1,7 +1,7 @@
 shellconf.py
 ============
 
-Tiny (2.7K) remote configuration script with shell-scripting for UNIX/Linux systems.
+Tiny (2.7K) remote configuration with shell scripts for UNIX/Linux systems.
 
 Run local shell scripts chronologically on defined remote servers (asynchronously for each machine, makes it very fast).
 
