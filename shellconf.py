@@ -78,3 +78,4 @@ if __name__ == '__main__':
                 sc.list_servers()
     else:
         sc.help()
+        sc.list_servers()
