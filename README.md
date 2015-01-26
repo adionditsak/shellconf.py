@@ -87,10 +87,10 @@ This would run the shell scripts placed in ./scripts/ on the remote servers one 
 
 ##Example ./log/output.log
 
-  ...
-  [uname.sh @ user@ip-1] (26/01/2015 | 10:08:17):
-  Linux hostname-1 2.6.32-358.2.1.el6.x86_64 #1 SMP Wed Mar 13 00:26:49 UTC 2013 x86_64 x86    _64 x86_64 GNU/Linux
-
-  [uname.sh @ user@ip-2] (26/01/2015 | 10:08:17):
-  Linux hostname-2 2.6.18-308.4.1.el5 #1 SMP Tue Apr 17 17:08:00 EDT 2012 x86_64 x86_64 x86_64     GNU/Linux
-  ...
+    ...
+    [uname.sh @ user@ip-1] (26/01/2015 | 10:08:17):
+    Linux hostname-1 2.6.32-358.2.1.el6.x86_64 #1 SMP Wed Mar 13 00:26:49 UTC 2013 x86_64 x86    _64 x86_64 GNU/Linux
+  
+    [uname.sh @ user@ip-2] (26/01/2015 | 10:08:17):
+    Linux hostname-2 2.6.18-308.4.1.el5 #1 SMP Tue Apr 17 17:08:00 EDT 2012 x86_64 x86_64 x86_64     GNU/Linux
+    ...
