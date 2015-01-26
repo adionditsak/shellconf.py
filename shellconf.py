@@ -29,7 +29,7 @@ class ShellConf():
 
     def run_for_all_servers(self):
         for server in config.servers:
-            threading.Thread(target=lambda:self.run_shell_scripts(server)).start() # async
+            threading.Thread(target=lambda: self.run_shell_scripts(server)).start() # async
 
     def run_for_one_server(self, server):
         self.run_shell_scripts(server)
@@ -67,12 +67,12 @@ class ShellConf():
                     with self.lock:
                         print('*** - SUCCESS with %s at %s. See ./log/output.log for details.' % (fn, server))
             else:
-                self.log(server, fn, "Script does not exist in scripts directory %s" % (self.scripts), 'error')
+                self.log(server, fn, "Script does not exist in scripts directory %s" % self.scripts, 'error')
                 with self.lock:
                     print('!!! - SCRIPT %s NOT FOUND in scripts directory %s. See ./log/error.log for details.' % (fn, self.scripts))
 
         with self.lock:
-            print('~~~~~~~ scripts for %s completed ~~~~~~~' % (server))
+            print('~~~~~~~ scripts for %s completed ~~~~~~~' % server)
 
     def help(self):
         print('Use -a/--all for all servers or -s/--server [server] for one server.')
