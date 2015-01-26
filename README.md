@@ -86,7 +86,7 @@ This will run the shell scripts defined in the config.scripts list, and check if
 
 ##Example output
     
-    $ python shellconf.py -a
+    $ ./shellconf.py -a
     [RUNNING SCRIPT ./scripts/apt.sh @ root@aarvik.dk]
     [RUNNING SCRIPT ./scripts/apt.sh @ user@ip-2]
     !!! - ERRORS with apt.sh at user@ip-2. See ./log/shellconf.log for details.
