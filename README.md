@@ -1,9 +1,9 @@
 shellconf.py
 ============
 
-Simple remote configuration with shell for UNIX/Linux systems.
+Tiny (2.7K) remote configuration script with shell-scripting for UNIX/Linux systems.
 
-Run local shell scripts chronologically on defined remote servers asynchronously.
+Run local shell scripts chronologically on defined remote servers (asynchronously for each machine, makes it very fast).
 
 MIT licensed - no restrictions.
 
@@ -32,7 +32,10 @@ MIT licensed - no restrictions.
 
 First of all, define your servers in the list of servers.py file, with the following format:
 
-    servers = ['user@ip-1', 'user@ip-2']
+    servers = [
+      'user@ip-1', 
+      'user@ip-2',
+    ]
   
 Then make sure you got what you need in your scripts folder of shell scripts to execute on your remote servers.
 
@@ -81,3 +84,4 @@ This would run the shell scripts placed in ./scripts/ on the remote servers one 
     [RUNNING SCRIPT ./scripts/list.sh @ root@aarvik.dk]
     *** - SUCCESS with list.sh at root@aarvik.dk. See ./log/shellconf.log for details.
     ~~~~~~~ scripts for root@aarvik.dk completed ~~~~~~~
+
